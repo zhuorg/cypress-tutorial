@@ -17,7 +17,7 @@ describe("Form test", () => {
        },
        scaled: true,
        blackout: [],
-       duration: 2300,
+       duration: 2300
      }
   },
 })
