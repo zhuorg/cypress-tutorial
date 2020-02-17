@@ -13,7 +13,7 @@ describe("Form test", () => {
        size: '15 kb',
        dimensions: {
          width: 1200,
-         height: 1000,
+         height: 1000
        },
        scaled: true,
        blackout: [],
