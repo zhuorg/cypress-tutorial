@@ -1,6 +1,6 @@
 {
   "baseUrl": "http://localhost:5000",
-  "pluginsFile": "cypress/plugins/index1.js",
+  "pluginsFile": "cypress/plugins/index.js",
   "viewportWidth": 1200,
   "viewportHeight": 900
 }
