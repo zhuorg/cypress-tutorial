@@ -13,11 +13,9 @@ jobs:
         uses: cypress-io/github-action@v1
         with:
           browser: chrome
-          record: true # Record results to cypress dashboard
           parallel: false
           start: npx serve
           wait-on: 'http://localhost:5000'
           config-file: cypress.json
           wait-on-timeout: 300
-        env:
-          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+ 
