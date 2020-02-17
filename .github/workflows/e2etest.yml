@@ -16,6 +16,7 @@ jobs:
       - name: Install & run e2e tests
         uses: cypress-io/github-action@v1
         with:
+          browser: chrome
           parallel: false
           start: npx serve
           wait-on: 'http://localhost:5000'
