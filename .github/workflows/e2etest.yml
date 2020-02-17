@@ -6,7 +6,7 @@ on:
     - '.github/workflows/**'
 jobs:
   e2eTests:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     #container: cypress/browsers:node13.6.0-chrome80-ff72
     steps:
       - name: Checkout
