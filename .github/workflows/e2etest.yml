@@ -1,0 +1,25 @@
+name: e2e test
+on: push
+jobs:
+  e2eTests:
+    runs-on: ubuntu-latest
+    container: cypress/browsers:node13.6.0-chrome80-ff72
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Install aveiro dependencies
+        uses: bahmutov/npm-install@v1
+        with:
+          working-directory: ./aveiro-server
+      - name: Install & run e2e tests
+        uses: cypress-io/github-action@v1
+        with:
+          browser: chrome
+          record: true # Record results to cypress dashboard
+          parallel: false
+          start: npm run e2e
+          wait-on: 'http://localhost:5000'
+          config-file: cypress.json
+          wait-on-timeout: 300
+        env:
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
