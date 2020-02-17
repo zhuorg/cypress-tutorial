@@ -7,7 +7,7 @@ on:
 jobs:
   e2eTests:
     runs-on: ubuntu-latest
-    #container: cypress/browsers:node13.6.0-chrome80-ff72
+    container: cypress/browsers:node13.6.0-chrome80-ff72
     steps:
       - name: Checkout
         uses: actions/checkout@v1
